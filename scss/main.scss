@@ -31,6 +31,7 @@ img{
     overflow: hidden;
     margin: auto;
     padding: 0 2rem;
+    text-align: center;
 }
 
 .flex-col{
@@ -96,15 +97,16 @@ img{
     }
 }
 
+.section-head{
+    font-size: 34px;
+    margin: 2.5rem 0;
+}
+
 //Home
 
 #staff{
     background-color: $color-light;
-    padding: 2em 0;
-    h2{
-        text-align: center;
-        padding-bottom: 1em ;
-    }
+    padding-bottom: 2rem;
 }
 
 #header{
@@ -160,4 +162,25 @@ img{
     }
 }
 
+#steps{
+    div{
+        &:nth-child(odd){
+            background-color: $color-dark;
+            color: white;
+            width: 100%;
+            padding: 25px 0;
+            text-align: center;
+        }
+        &:nth-child(even){
+            background-color: $color-light;
+            color: black;
+            width: 100%;
+            padding: 25px 0;
+            text-align: center;
+        }
+        p{
+            padding: 1rem 0;
+        }
+    }
+}
 

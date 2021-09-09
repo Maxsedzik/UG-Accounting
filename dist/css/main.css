@@ -17,7 +17,8 @@ img {
   width: 80%;
   overflow: hidden;
   margin: auto;
-  padding: 0 2rem; }
+  padding: 0 2rem;
+  text-align: center; }
 
 .flex-col {
   display: flex;
@@ -71,12 +72,13 @@ img {
   .btn-wh:hover {
     background-color: rgba(255, 255, 255, 0.6); }
 
+.section-head {
+  font-size: 34px;
+  margin: 2.5rem 0; }
+
 #staff {
   background-color: #eee;
-  padding: 2em 0; }
-  #staff h2 {
-    text-align: center;
-    padding-bottom: 1em; }
+  padding-bottom: 2rem; }
 
 #header {
   background-color: #222222;
@@ -120,3 +122,20 @@ img {
     height: 75vh;
     z-index: 10;
     position: relative; }
+
+#steps div:nth-child(odd) {
+  background-color: #222222;
+  color: white;
+  width: 100%;
+  padding: 25px 0;
+  text-align: center; }
+
+#steps div:nth-child(even) {
+  background-color: #eee;
+  color: black;
+  width: 100%;
+  padding: 25px 0;
+  text-align: center; }
+
+#steps div p {
+  padding: 1rem 0; }
