@@ -22,9 +22,10 @@ img {
 
 .flex-col {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; }
+  flex-direction: column; }
+  .flex-col-center {
+    align-items: center;
+    justify-content: center; }
 
 .flex-row {
   display: flex;
@@ -142,3 +143,10 @@ img {
 
 #steps div p {
   padding: 1rem 0; }
+
+.footer {
+  background-color: #222222;
+  color: white;
+  padding: 2rem 3rem; }
+  .footer i {
+    padding-bottom: 1rem; }

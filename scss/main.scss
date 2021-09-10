@@ -37,15 +37,17 @@ img{
 .flex-col{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    &-center{
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .flex-row{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; 
 }
 
 .light{
@@ -188,3 +190,13 @@ img{
     }
 }
 
+//FOOTER
+
+.footer{
+    background-color: $color-dark;
+    color: white;
+    padding: 2rem 3rem;
+    i{
+        padding-bottom: 1rem;
+    }
+}
