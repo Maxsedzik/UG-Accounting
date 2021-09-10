@@ -4,7 +4,10 @@ $color-dark: #222222;
 $color-yel: #fafd0f;
 $color-red: #900603;
 $lead-image: url(../images/back.jpg);
+$testimonial-image: url(../images/testimonials.jpg);
 $lead-height: 75vh;
+$testimonial-height: 90vh;
+$header-height: 80px;
 
 //Main
 *{
@@ -37,10 +40,6 @@ img{
 .flex-col{
     display: flex;
     flex-direction: column;
-    &-center{
-        align-items: center;
-        justify-content: center;
-    }
 }
 
 .flex-row{
@@ -76,13 +75,55 @@ img{
     grid-column-gap: 1rem;
 }
 
-.divider{
+.boxes-grid-row{
+    display: grid;
+}
+
+.boxes-grid-testimonial{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.box-opacity{
+    background:rgba($color: #fff, $alpha: 0.6);
+    padding: 1.2 rem;
+    img{
+        width: 80px;
+        border-radius: 50%;
+        padding: 1rem;
+    }
+    h5{
+        font-size: 18px;
+        margin: 1rem 0;
+    }
+}
+
+.story-grid{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 1rem;
+}
+
+%divider-shared{
     height: 3px;
     width: 3rem;
-    background-color: $color-yel;
     display: block;
     margin: 0.5rem auto;
 }
+
+.divider{
+    &-yel{
+        @extend %divider-shared;
+        background-color: $color-yel;
+    }
+    &-wh{
+        @extend %divider-shared;
+        background-color: white;
+        }
+}
+
 
 .btn-wh{
     margin-top: 1rem;
@@ -104,6 +145,10 @@ img{
     margin: 2.5rem 0;
 }
 
+.text-start{
+    text-align: start;
+}
+
 //Home
 
 #staff{
@@ -115,7 +160,7 @@ img{
     background-color: $color-dark;
     color: white;
     padding: 1.5rem 0;
-    height: 80px;
+    height: $header-height;
     box-sizing: border-box;
 }
 
@@ -142,7 +187,7 @@ img{
     &:before{
         content: '';
         position: absolute;
-        top: 80px;
+        top: $header-height;
         left: 0;
         width: 100%;
         height: $lead-height;
@@ -199,4 +244,52 @@ img{
     i{
         padding-bottom: 1rem;
     }
+}
+
+//ABOUT US
+
+#about{
+    padding: 3rem 0;
+}
+
+#sidebar{
+    background-color: $color-dark;
+    color: white;
+    align-self: center;
+    padding: 2rem;
+    h3{
+        font-size: 24px;
+    }
+    ul{
+        padding: 1rem 0;
+    }
+    li{
+        text-align: left;
+        text-decoration: underline;
+        text-transform: uppercase;
+        font-weight: 800;
+        padding-bottom: 1rem;
+    }
+}
+
+//TESTIMONIALS
+
+#testimonials{
+    background: $testimonial-image no-repeat center center / cover;
+    height: $testimonial-height;
+        &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: $header-height;
+        height: $testimonial-height;
+        width: 100%;
+        background: rgba($color: #fff, $alpha: 0.6);
+        z-index: 0;
+        }
+        &-content{
+            z-index: 10;
+            color: #000;
+            position: relative;
+        }
 }
