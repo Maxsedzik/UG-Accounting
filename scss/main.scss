@@ -162,6 +162,10 @@ img{
     }
 }
 
+#process{
+    background-color: $color-light;
+}
+
 #steps{
     div{
         &:nth-child(odd){
