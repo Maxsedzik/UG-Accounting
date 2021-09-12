@@ -3,6 +3,7 @@ $color-light: #eee;
 $color-dark: #222222;
 $color-yel: #fafd0f;
 $color-red: #900603;
+$color-red-lh: #900503d2;
 $lead-image: url(../images/back.jpg);
 $testimonial-image: url(../images/testimonials.jpg);
 $lead-height: 75vh;
@@ -337,6 +338,9 @@ img{
     &-form{
         padding: 1rem 0;
         }
+    input[type=submit]:hover{
+        background: $color-red-lh;
+    }
     }   
 
 #name{

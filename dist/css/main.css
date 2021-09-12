@@ -247,6 +247,8 @@ img {
       padding: 3rem 0; }
   #contact-form {
     padding: 1rem 0; }
+  #contact input[type=submit]:hover {
+    background: #900503d2; }
 
 #name {
   padding: 0.6rem 0;
